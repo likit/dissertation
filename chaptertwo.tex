@@ -288,19 +288,6 @@ assembly; 24,928 gene models containing 29,776 from our local
 assembly; and 22,587 gene models containing 34,800 isoforms from the
 merged global and local assemblies (Table~\ref{genes_transcripts}).
 
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[width=6in]{algorithm.pdf}
-\end{center}
-\caption{
-\textbf{Intron and exon graphs.} Each intron connects to exons whose splice
-junctions match it boundary.  Some exons are excluded from the final gene model
-if they are incomplete (exon 3a,b).  Introns sharing at least one exon are
-grouped together.  Then an exon graph is made using exons as nodes.
-}
-\label{algorithm}
-\end{figure}
-
 \begin{table}
 \caption{
 \textbf{Number of putative genes and isoforms}}
@@ -626,13 +613,13 @@ gene models.
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=6in]{local_assembly}
+\includegraphics[width=3in]{local_assembly}
 \end{center}
 \caption{
-\textbf{Local Assembly Pipeline.}
-Reads are first mapped to a chicken genome.  Then only mapped reads are
-assembled by Velvet and Oases. Reads mapped to each chromosome
-are assembled separately.
+\textbf{Local assembly pipeline.}
+Reads are first mapped to a chicken genome by Tophat.  Then reads
+mapped to each chromosome are assembled by Velvet and Oases
+separately.
 }
 \label{local_assembly}
 \end{figure}
@@ -690,6 +677,24 @@ of exons is created and structures of isoforms are derived from traversing
 paths in the splice graph.  Gimme is open-source and available at
 \texttt{https://github.com/ged-lab/gimme}.
 
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=7in]{algorithm.pdf}
+\end{center}
+\caption{
+\textbf{Intron and exon graphs.}
+Each intron connects to exons whose splice junctions match its
+boundary.  Some exons are excluded from the final gene model if
+they are at $3\prime$ or $5\prime$ end and smaller than other
+exons sharing the same intron (exon 1a,3a and 3b).  Introns
+sharing at least one exon are grouped together.  Then an exon
+graph is made using exons as nodes.  A transcript is derived from
+all unique exons in the graph.
+}
+\label{algorithm}
+\end{figure}
+
+
 \subsection{Protein sequence translation}
 
 We employed ESTScan version 3.0.3 to translate protein sequences from our gene
@@ -731,7 +736,7 @@ Expressed sequence tags (ESTs) and mRNAs were downloaded from the UCSC genome
 website.  The database was loaded from GENBANK on 1 January 2014.  Sequences
 were aligned to the chicken genome using BLAT.
 
-\subsection{Pipeline and Scripts}
+\subsection{Pipeline and scripts}
 
 The pipeline and scripts used in this study is hosted at
 
