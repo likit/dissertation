@@ -1,0 +1,126 @@
+\chapter{Conclusions}
+\section{Summary}
+
+The goal of the projects discussed in this dissertation is
+to identify genes and isoforms that contribute to MD
+resistance using RNA-Seq data. However, available chicken
+gene models are not suitable for expression analysis because
+they are not complete. For example, some of them do not
+include full UTRs and some exons expressed. We have
+demonstrated that different gene models yield different results
+in differential expression analysis as well as biological
+pathway analysis. Therefore, it is important to improve on
+existing gene models using RNA-Seq data.
+
+We have developed a pipeline that can combine both {\em de
+novo} assembly and reference-based assembly to construct
+gene models that we have shown to recover more splice
+variants in the dataset than either method alone. We have
+also described the local assembly technique that is more
+memory efficient than global assembly (conventional {\em
+de novo} assembly) and can recover some unique splice
+variants not found by conventional assembly.
+
+We used the merged gene models from Cufflinks and {\em de
+novo} assembly described above to study gene and isoform expression
+from RNA-Seq data collected from spleens of resistant and
+susceptible inbred chicken lines (lines 6 and 7
+respectively) at 4 dpi -- lytic phase of infection. We found
+that more genes were differentially expressed in the
+susceptible line than the resistant line and those DE genes were
+enriched in genes active in both the innate and the adaptive immune system.
+In contrast, only pathways involved in the innate immune
+system were enriched in DE genes within the resistant line.
+The results indicate that the adaptive immune responses were enhanced in the
+susceptible line at this stage of infection. The adaptive
+immune responses involve recruiting and activating T cells,
+which results in more target T cells for MDV because only
+activated T cells are thought to be infected by MDV.  More
+infected T cells could lead to a larger number of T cells
+that transform into T cells lymphoma in the susceptible line.
+
+To investigate further, we used our merged gene models to
+study isoform expression between susceptible and resistant
+lines. Splice variants are highly important in the immune
+system and many genes have been shown to play a role in
+increasing risk and prognosis of diseases. Several mutations
+at binding motifs of splicing factors that alter splicing
+patterns and are associated with diseases have also been
+characterized. However, reads from RNA-Seq are too short to
+span across the entire transcripts; therefore, it is
+difficult to estimate isoform expression accurately.
+Moreover, we cannot be certain that our gene models include
+all expressed isoforms due to the method used to build gene
+models from short reads. For these reasons, we decided to
+use an exon centric approach, which only compares exon
+expression. Exon expression can be estimated more accurately
+because reads can span across exon junctions of an exon of
+interest and its adjacent exons.
+
+Using this method, we identified many genes that have
+differential exon expression between susceptible and
+resistant lines. Intriguingly, we found that some genes
+have different patterns of exon expression between lines and
+they were involved in the actin cytoskeleton pathway and some
+other pathways involved in immune responses.
+The actin cytoskeleton pathway is important in cell-to-cell
+contact, cytokinesis, phagocytosis, and antigen presentation
+which are all important in adaptive immune responses.
+Based on the results, we hypothesized that splice
+variants may play a role in limiting or controlling the
+elicitation of the adaptive immune response in the resistant
+line, which in turn limiting the spread of the virus to
+activated T cells. Results from splicing finder prediction
+also showed that exonic SNPs between susceptible and
+resistant lines may regulate splicing patterns by disrupting
+or creating new binding sites for splicing factors. Results
+from our study, after further validation, could be used to
+facilitate the marker-assisted selective breeding to develop
+chickens with genetic resistant to MD.
+
+\section{Future work}
+
+Results from our study have shown that isoforms could play a
+significant roles in MD resistance. Therefore, to better
+understand a mechanism that controls MD resistance,
+especially at an isoform-level, we need to obtain more
+sequencing data to identify more isoforms involved in immune
+responses to MDV infection. Ideally, we need to obtain data
+from multiple time points and with longer read lengths.
+
+However, obtaining more data is relatively inexpensive in
+regard to time and labor spent on analyzing data.  To
+enhance sensitivity of gene and isoform detection, gene
+models need to be updated using new data to ensure that the
+models include all genes and isoforms expressed in the
+dataset. To our knowledge, there is no available integrated
+system for building gene models from multiple methods and
+existing gene models, and identifying alternative exon usage and
+exonic SNPs, as well as predicting protein domains from exons
+of interest as described in this dissertation. The whole
+process is complicated and only practical for adept
+bioinformaticians.  To accommodate biologists, we plan to
+develop an open protocol for isoform analysis based on the
+pipeline used in this dissertation from the beginning to the
+end. Every step in the protocol will be thoroughly
+documented and the protocol will be available online and can
+be updated by users.  Once established, the protocol can be
+used by biologists to iteratively update gene models and
+perform gene and isoform expression analysis from RNA-Seq
+data from chickens as well as other organisms with
+low-quality gene annotation.
+
+The local assembly described in this dissertation can
+recover unique splice variants not found in the global
+assembly. However, the method relies on read alignment to a
+reference genome. Therefore, it is dependent on the quality
+of the genome as well as efficiency of the short read aligner
+used. In addition, for most non-model organisms, a
+high-quality reference genome is not available; thus, this
+method cannot be employed. Even though we have successfully
+used the method to recover many splice variants, the
+inherent mechanism of local assembly has not been
+understood.  An understanding of the mechanism could
+lead to an algorithm that improves sensitivity of splice
+variants detection from {\em de novo} assembly and can be
+used in organisms without a reference genome.

@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dis.aux
+The style file: abbrv.bst
+Database file #1: dis.bib
+Warning--entry type for "pysam" isn't style-file defined
+--line 1581 of file dis.bib
+Warning--entry type for "seqclean" isn't style-file defined
+--line 1588 of file dis.bib
+Warning--entry type for "bcftools" isn't style-file defined
+--line 1596 of file dis.bib
+Warning--entry type for "gimme:Online" isn't style-file defined
+--line 1600 of file dis.bib
+You've used 84 entries,
+            2118 wiz_defined-function locations,
+            990 strings with 23286 characters,
+and the built_in function-call counts, 35416 in all, are:
+= -- 3320
+> -- 2408
+< -- 7
++ -- 964
+- -- 870
+* -- 3128
+:= -- 6098
+add.period$ -- 250
+call.type$ -- 84
+change.case$ -- 675
+chr.to.int$ -- 0
+cite$ -- 84
+duplicate$ -- 944
+empty$ -- 2219
+format.name$ -- 870
+if$ -- 6917
+int.to.chr$ -- 0
+int.to.str$ -- 84
+missing$ -- 78
+newline$ -- 419
+num.names$ -- 168
+pop$ -- 570
+preamble$ -- 1
+purify$ -- 593
+quote$ -- 0
+skip$ -- 667
+stack$ -- 0
+substring$ -- 2228
+swap$ -- 128
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 336
+warning$ -- 0
+while$ -- 309
+width$ -- 86
+write$ -- 904
+(There were 4 warnings)

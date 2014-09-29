@@ -1,0 +1,247 @@
+\chapter{Introduction}
+\section{Overview}
+
+Marek's disease (MD) is a lymphoproliferative disease of chickens
+caused by a highly oncogenic Marek's disease virus (MDV).
+Vaccination has been effective in reducing tumor formation and
+loss from MD; however, it does not confer protective immunity
+against infection and shedding of MDV~\cite{gimeno2008marek}.
+Continuous shedding of viruses from feather follicles of
+vaccinated chickens allows field viruses to circulate in the
+flock~\cite{morrow2004marek}.  As a consequence, more virulent
+strains that overcome vaccinal protection have
+emerged~\cite{witter1998control,gimeno2008marek} leading to
+outbreaks that have cost an estimate of \$2
+billion~\cite{morrow2004marek}.  Selective breeding of resistant
+birds is an alternative control measure against MD.  In this
+study, we use transcriptome data from next-generation sequencing
+to compare gene and isoform expression in response to MDV
+infection between MD resistant (line 6) and susceptible (line 7)
+chickens in order to identify candidate genes and isoforms that
+contribute to resistance to MD.
+
+\section{Background}
+\subsection{Genetic Resistance to MD}
+
+Genetic resistance to MD can be categorized into {\em MHC}
+and {\em non-MHC} associated forms.  The {\em MHC} locus (B
+system haplotypes) is strongly associated with MD resistance
+and the phenotypes of different haplotypes have been well
+characterized.  For example, B\textsuperscript{21},
+B\textsuperscript{2} and B\textsuperscript{6} alleles are
+usually associated with MD resistance, on the other hand,
+B\textsuperscript{5}, B\textsuperscript{13} and
+B\textsuperscript{19} are associated with susceptibility.
+Chickens with homozygous B\textsuperscript{21} were most
+resistant to MD ($0\%$), whereas, chicken heterozygous with
+other alleles and B\textsuperscript{21} developed $40-93\%$
+MD~\cite{briles1980identification}.  However, in some
+populations, the association of B haplotypes does not follow
+the aforementioned patterns. For example, the Cornell
+chicken strains C and K were selected for resistance to MD,
+yet strain C possesses B\textsuperscript{6},
+B\textsuperscript{13} and B\textsuperscript{15} and strain K
+possesses
+B\textsuperscript{15}~\cite{bacon1987influence,briles1980identification}.
+Similarly, inbred chicken lines 6 and 7 selected for
+resistance and susceptible to MD are both
+B\textsuperscript{2,2} homozygous.  This suggests that genes
+outside the {\em MHC} locus also contribute to MD
+resistance.
+
+It has been postulated that different mechanisms are
+controlled by {\em MHC} and {\em non-MHC}
+loci~\cite{kaiser2003differential}.  For instance, Kaiser et
+al.~\cite{kaiser2003differential} reported that the level of
+MDV viral load also differed between lines 6 and N after 10
+and 14 days post infection (dpi) -- the onset of latency --
+and decreased to the same level by 21 dpi.  Although both
+lines 6 and N are resistant to MD, the level of MDV viral
+load in line 6 was significantly higher than in line N at 10
+and 14 dpi (P$<0.05$).  Resistance line N is associated
+with the B\textsuperscript{21} haplotype, whereas, the
+resistance of line 6 is associated with the MDV1 locus.
+
+% {\em non-MHC} genes are thought to have effects in cellular interaction,
+% cytokines or innate immunity.
+% {\em In vitro} and {\em in vivo} studies have shown that T cells from line 7
+% absorbed a greater number of MDV and were more active to mitogen than those from
+% line 6~\cite{lee1983ontogeny,powell1982mechanism}.
+% It has been postulated that the resistance is attributable to an inherent
+% mechanism that limits the susceptibility and the number of target T cells.
+
+\subsection{Genome-wide scan for genes conferring resistance to MD}
+
+Identification of precise genes is essential for developing
+resistant breeds using a marker-assisted selection (MAS)
+.  A genetic-driven method has been used to identify
+quantitative trait loci (QTL) associated with MD resistance
+or MD infection using lines 6 and 7 as parents.  Seven
+significant and seven suggestive QTLs were identified by
+Vallejo ~\cite{vallejo1998genetic} and
+Yonash~\cite{yonash1999high}; whereas,
+Bumstead~\cite{bumstead1998genomic} identified a significant
+locus on chromosome 1, which is referred to as MDV1.  MDV1
+region has a strong association with resistance in terms of
+reduced viral level and tumour incidence.  Based on
+comparative mapping analysis, this locus has shared
+synteny with the mouse region that includes the {\em CMV1} and {\em
+Ly49} genes.  {\em CMV1} controls resistance to murine
+cytomegalovirus by affecting viral proliferaton and {\em
+Ly49} serves as an inhibitor of cell killing by NK cells.
+Correlation between functions of {\em CMV1} and {\em Ly49}
+and resistance associated to this region is notable.
+
+The drawback of QTL analysis of complex traits is it
+requires a large population size ($>500$) to achieve
+reliable results.  Ideally, a population size of $>1000$ is
+needed for fine-mapping suitable for successful MAS ($<1$
+cM)~\cite{young1999cautiously}.  Furthermore, only a few true
+QTL of major effect can be detected in any given study
+~\cite{collard2005introduction}.  Therefore, an alternative
+approach that could facilitate the identification of precise
+genes at a genome-wide scale is warranted.
+
+Differential gene expression is thought to contribute to
+phenotypic variation and difference in gene expression can
+be controlled by genetic factors~\cite{morley2004genetic}.
+Furthermore, functional analysis of differential-expressed
+(DE) genes can provide an insight into pathways and
+biological mechanisms that control phenotypes.  Data from
+RNA-Seq can also be used to investigate mutations such as
+SNPs and indels that might be responsible for phenotypic
+differences.
+
+Recently, high-throughput technologies including microarray
+and next-generation sequencing (NGS) have been used to
+compare gene or EST expression between MDV-infected birds of
+selected resistant and susceptible lines to identify
+candidate genes that contribute to MD resistance.
+% need to add more about this?
+Sarson~\cite{sarson2008transcriptional} used a low-density
+immune-specific cDNA microarray to compare expression of
+immune genes from splenocytes between resistant and
+susceptible chickens, with B\textsuperscript{21} and the
+B\textsuperscript{19} haplotype respectively, and found that
+the percentage of differential-expressed genes between
+B\textsuperscript{19} control and infected birds was
+highest.  Furthermore, B cell surface markers such as {\em
+Bu-1} and {\em IgM} levels were downregulated, which might
+contribute to the decrease in B cells in the lytic phase of
+infection.   Morgan et al~\cite{morgan2001induction} also used a DNA
+microarray designed for chicken to compare the differential
+expression between lines 6 and 7 at multiple time points.
+Of $\sim1200$ genes and ESTs, a few genes including growth
+hormone ({\em GH1}) and lymphotactin ({\em SCYC1}) were
+found to be differentially expressed ($>2$ fold) and located
+near the QTL region on chromosome 1 (MDV1) identified by
+Bumstead~\cite{bumstead1998genomic}.  Growth hormone binds
+to MDV {\em SORF2} and is associated with MD
+resistance~\cite{liu2001growth} and lymphotactin serves as a
+chemoattractant of CD4+ and CD8+ T cells.
+
+The findings from these studies are interesting, yet very
+limited due to the small scale of the analysis.  A
+genome-wide scale microarray study was, therefore, conducted
+by Smith et al~\cite{smith2011systems} to compare gene expression
+between virus-infected lines 6 and 7 from spleen and thymus
+at a larger scale.  In control groups, 395 genes in spleen
+and 177 genes in thymus were differentially expressed
+between lines 6 and 7.  Genes highly expressed in line 6 and
+involved in innate immune responses include {\em DNAJC3,
+DDT, NMU, GSTO1, VIP, HPS5, MMP7, FGFR3, HSCB, E2F4, SFTPA2}
+and {\em GNG12}.  In infected groups, 593 genes in spleen
+and 156 genes in thymus were differentially expressed
+including {\em IgG-H, AMIGO2, MMP13}, and {\em CLEC3B} that
+were highly expressed in line 6 and {\em AVD, IRG1, HSP25,
+ART1, IL-18, NOS2A, CXCL13, CCLi2, MX1, SOCS1}, and {\em
+IL-6} that were highly expressed in line 7.  Approximately
+$26-30\%$ of DE genes were located in the previously reported QTL
+regions, which could be potential candidate genes.
+
+To conclude, high-throughput technologies together with
+genetic approaches have been successfully used to identify
+many candidate genes associated with MD resistance, which
+confirms the complex nature of MD genetic resistance.
+However, the interaction of these candidate genes and their
+roles in disease resistance have not been fully defined.
+Furthermore, only global gene expression has been used for
+identification of genes conferring MD resistance, whereas,
+alternative isoforms have been shown to play a significant
+role in immune responses and contribute to disease
+susceptibility~\cite{lynch2004consequences,wang2007splicing}.
+This dissertation aims to identify both candidate genes and
+isoforms that are involved in resistance to MD.
+
+\section{Problem Statement}
+
+In the immune system, many genes can express different
+isoforms with a distinctive, synergistic or even opposing
+function~\cite{lynch2004consequences,wang2007splicing}.
+Expression of isoforms is regulated in part by {\em
+cis-}regulatory sequences within an exon or intron of a
+pre-mRNA~\cite{blencowe2000exonic}.  Although expressions of
+various genes have been examined across stages of infection
+and various genetic
+background~\cite{smith2011systems,sarson2008transcriptional,kaiser2003differential,morgan2001induction},
+the investigation of genome-wide isoform expression has not
+been conducted.  The gap in the knowledge is, therefore, the
+identification of candidate isoforms that contribute to MD
+resistance.
+
+Many tools are currently available for estimating gene and
+isoform expression from RNA-Seq data as well as comparing
+their expressions between samples (reviewed in
+~\cite{trapnell2012differential}).  However, they are all
+reliant on completeness of provided gene models.  Available
+gene models such as Ensembl annotation do not include all
+genes and isoforms; therefore, they are not ideal for
+identification of candidate genes and isoforms.  In
+addition, some annotated gene models do not included
+unstranslated regions (UTRs) that can have important
+biological functions as well as significant sizes.  Methods
+for expression estimation typically infer gene expression
+from the number of reads mapped to transcripts or gene
+models.  Without complete gene models, the expression will
+be inaccurately estimated resulting in errors in
+differential expression (DE) prediction.  Consequently,
+biological pathway prediction will be affected because the
+prediction is based solely on results from DE prediction.
+
+\section{Significance of Research}
+
+The study will create a pipeline to integrate RNA-Seq data
+with existing gene models to extend the models so that they
+include genes, isoforms, and UTRs expressed in a sample.
+The extended genes models will allow a better estimate of
+genes and isoforms expression, which will be used to predict
+biological pathways perturbed in responses to MDV infection.
+Comparison of perturbed biological pathways between
+resistant and susceptible birds will provide an insight into
+genes and mechanisms that contribute to MD resistance.
+Additionally, in depth investigation of isoform expression
+could lead to identification of exonic SNPs that regulate
+alternative splicing patterns, which could reveal
+unprecedented level of molecular and genetic mechanisms that
+impart resistance to MD.
+
+\section{Outline of Dissertation}
+
+In the first chapter, we describe a method developed to
+construct gene models from different sources including {\em
+de novo} assembly of short reads from RNA-Seq data, a
+reference-guided assembly (Cufflinks) and Ensembl gene
+models. We show that our method can be used to combine gene
+models from different sources to build gene models that
+include more splice variants. We also describe a local
+assembly method that can enhance sensitivity of splice
+variant detection. In the second chapter, we compare
+results of gene expression and KEGG pathway analysis from
+different gene models. We demonstrate that different gene
+models give different results from pathway enrichment
+analysis. In addition, we discuss the use of combined
+annotation from chicken and mouse to increase sensitivity of
+pathway prediction. In the last chapter, we report
+differentially expressed genes and isoforms and discuss a
+potential role of differentially expressed isoforms in MD
+resistance.

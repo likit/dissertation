@@ -1,0 +1,81 @@
+\contentsline {chapter}{List of Tables}{ix}
+\contentsline {chapter}{List of Figures}{x}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Overview}{1}
+\contentsline {section}{\numberline {1.2}Background}{1}
+\contentsline {subsection}{\numberline {1.2.1}Genetic Resistance to MD}{1}
+\contentsline {subsection}{\numberline {1.2.2}Genome-wide scan for genes conferring resistance to MD}{2}
+\contentsline {section}{\numberline {1.3}Problem Statement}{4}
+\contentsline {section}{\numberline {1.4}Significance of Research}{5}
+\contentsline {section}{\numberline {1.5}Outline of Dissertation}{5}
+\contentsline {chapter}{\chapternumberline {2}RNA-Seq assembly discovers many splice variants}{7}
+\contentsline {section}{\numberline {2.1}Introduction}{7}
+\contentsline {section}{\numberline {2.2}Results}{9}
+\contentsline {subsection}{\numberline {2.2.1}Local assembly enhances isoform detection}{9}
+\contentsline {subsection}{\numberline {2.2.2}Oases-M discards splice variants}{10}
+\contentsline {subsection}{\numberline {2.2.3}Exon graphs can reconstruct putative splice variants}{11}
+\contentsline {subsection}{\numberline {2.2.4}Validation of gene models}{12}
+\contentsline {subsubsection}{\numberline {2.2.4.1}The gene models include most reads}{13}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Almost all splice junctions have high coverage}{13}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Most splice junctions are independently supported}{16}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Our pipeline improves on existing reference-based approaches}{18}
+\contentsline {subsubsection}{\numberline {2.2.4.5}Gimme can iteratively merge sets of gene models}{21}
+\contentsline {subsubsection}{\numberline {2.2.4.6}Validating chicken sequences by using mouse homologs}{23}
+\contentsline {section}{\numberline {2.3}Discussion}{23}
+\contentsline {section}{\numberline {2.4}Materials and Methods}{25}
+\contentsline {subsection}{\numberline {2.4.1}Reads quality trimming}{25}
+\contentsline {subsection}{\numberline {2.4.2}Data}{25}
+\contentsline {subsection}{\numberline {2.4.3}Mapping reads to the genome and gene models}{25}
+\contentsline {subsection}{\numberline {2.4.4}Global and local assembly}{25}
+\contentsline {subsection}{\numberline {2.4.5}Gene model construction}{26}
+\contentsline {subsubsection}{\numberline {2.4.5.1}Overall pipeline}{26}
+\contentsline {subsubsection}{\numberline {2.4.5.2}Algorithm}{27}
+\contentsline {subsection}{\numberline {2.4.6}Protein sequence translation}{27}
+\contentsline {subsection}{\numberline {2.4.7}Finding unique sequences between datasets}{29}
+\contentsline {subsection}{\numberline {2.4.8}Sequence homology analysis}{29}
+\contentsline {subsection}{\numberline {2.4.9}Spliced reads count}{29}
+\contentsline {subsection}{\numberline {2.4.10}Sequence assembly using Cufflinks}{29}
+\contentsline {subsection}{\numberline {2.4.11}Expressed sequence tags and Genbank mRNA}{29}
+\contentsline {subsection}{\numberline {2.4.12}Pipeline and Scripts}{30}
+\contentsline {chapter}{\chapternumberline {3}Comparison of Gene Network Inferred by RNA-Seq analysis}{31}
+\contentsline {section}{\numberline {3.1}Introduction}{31}
+\contentsline {section}{\numberline {3.2}Results}{32}
+\contentsline {subsection}{\numberline {3.2.1}The set of differentially expressed genes varies widely by gene model set used}{32}
+\contentsline {subsection}{\numberline {3.2.2}Variation in differential expression predictions is due to variation in read mapping}{34}
+\contentsline {subsection}{\numberline {3.2.3}A majority of differential-expressed genes are not annotated in KEGG pathway}{39}
+\contentsline {subsection}{\numberline {3.2.4}Pathway predictions vary widely between gene model sets}{41}
+\contentsline {section}{\numberline {3.3}Discussion}{43}
+\contentsline {subsection}{\numberline {3.3.1}Variation in gene model sets greatly affects expression estimates}{43}
+\contentsline {subsection}{\numberline {3.3.2}Conclusion}{44}
+\contentsline {section}{\numberline {3.4}Materials and Methods}{45}
+\contentsline {subsection}{\numberline {3.4.1}Sequences and quality trimming}{45}
+\contentsline {subsection}{\numberline {3.4.2}Custom gene models construction}{45}
+\contentsline {subsection}{\numberline {3.4.3}Differential gene expression and gene ontology}{45}
+\contentsline {subsection}{\numberline {3.4.4}Pipeline and scripts}{46}
+\contentsline {chapter}{\chapternumberline {4}A genome-wide scan for genes and isoforms responsible for MD resistance}{49}
+\contentsline {section}{\numberline {4.1}Introduction}{49}
+\contentsline {section}{\numberline {4.2}Results and Discussion}{50}
+\contentsline {subsection}{\numberline {4.2.1}Differential expression results from our method are comparable to previous studies}{50}
+\contentsline {subsection}{\numberline {4.2.2}Differential gene expression indicates active immune responses to ongoing lytic infection in the susceptible line}{51}
+\contentsline {subsection}{\numberline {4.2.3}Functional analysis of differential-expressed genes indicates inactive adaptive immune responses in the resistant line}{54}
+\contentsline {subsection}{\numberline {4.2.4}Genes with differential exon usage (DEU) in response to MDV infection can be divided into four groups based on their patterns of expression}{55}
+\contentsline {subsection}{\numberline {4.2.5}Roles of {\em LFA-1} and actin cytoskeleton in T cells activation}{63}
+\contentsline {subsection}{\numberline {4.2.6}Prediction of functional domains of splice forms of genes in the actin cytoskeleton pathway}{64}
+\contentsline {subsection}{\numberline {4.2.7}Prediction of {\em cis}-regulatory elements in alternative splicing exons of genes in group II}{66}
+\contentsline {section}{\numberline {4.3}Conclusion}{72}
+\contentsline {section}{\numberline {4.4}Materials and methods}{73}
+\contentsline {subsection}{\numberline {4.4.1}Sequences and quality trimming}{73}
+\contentsline {subsection}{\numberline {4.4.2}Gene model construction}{73}
+\contentsline {subsection}{\numberline {4.4.3}Differential gene expression analysis and Gene Ontology}{73}
+\contentsline {subsection}{\numberline {4.4.4}Differential exon usage analysis}{74}
+\contentsline {subsection}{\numberline {4.4.5}Variant calling and {\em in silico} splicing analysis}{74}
+\contentsline {subsection}{\numberline {4.4.6}Protein domains search}{74}
+\contentsline {subsection}{\numberline {4.4.7}Pipeline and scripts}{74}
+\contentsline {chapter}{\chapternumberline {5}Conclusions}{75}
+\contentsline {section}{\numberline {5.1}Summary}{75}
+\contentsline {section}{\numberline {5.2}Future work}{76}
+\contentsline {chapter}{{APPENDIX}}{77}
+\changetocdepth {-1}
+\changetocdepth {0}
+ \cftchapterindent 0em\relax \cftbeforechapterskip 1.0em plus\p@ \relax 
+\contentsline {chapter}{BIBLIOGRAPHY}{80}

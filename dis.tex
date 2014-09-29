@@ -1,0 +1,225 @@
+% This is a template for use with the MSU Thesis class
+%
+% Class options: 
+% PhD for dissertations;
+% MA for Master of Arts 
+% MS for Master of Science
+% MAT for Master of Arts for Teachers  
+% MBA for Master of Business Administration  
+% MFA for Master of Fine Arts  
+% MIPS for Master of International Planning Studies  
+% MHRL for Master of Human Resources and Labor Relations  
+% MMus for Master of Music  
+% MSN for Master of Science in Nursing  
+% MPP for Master of Public Policy  
+% MSW for Master of Social Work  
+% MURP for Master in Urban and Regional Planning  
+%
+% Default is PhD
+%
+%
+% This template has everything in the right order.
+% Just add real content and you're done!
+%
+\documentclass[lscape]{msu-thesis}
+%
+% for a prettier, but possibly non-compliant table of contents use the [mixedtoc] option
+% for a plain table of contents use the [plaintoc] option
+% for a horrendous looking, but possibly required table of contents, use the [boldtoc] option
+%
+% If you have large tables/figures that need to be in landscape mode, add the [lscape] option
+
+% This is standard fontenc/inputenc for pdflatex
+% If you use LuaLaTeX or XeLaTeX you should replace this with the fontspec package
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+%
+% If the thesis office requires Times, we'll give them Times
+% You can experiment with other font packages here if you like.
+% If you are using XeLaTeX or LuaLaTeX load the Times or Times New Roman font with \setmainfont
+\usepackage{mathptmx} 
+\graphicspath{{images/}}
+%
+% Load any extra packages here
+%
+% You must specify the title of your thesis, your name, the field of study (not department), and the year
+\title{Identification of candidate genes and isoforms associated with
+genetic resistance to Marek's Disease from RNA-Seq data}
+\author{Likit Preeyanon}
+\fieldofstudy{Microbiology and Molecular Genetics} % This should be in sentence case
+\date{2014}
+
+% If you want a dedication page, specify the text of the dedication here and uncomment the next command.
+%
+\dedication{To scientists who encourage open science.}
+%
+\begin{document}
+
+% All the stuff before your actual chapters is called the front matter
+\frontmatter
+% First make the title page
+\maketitlepage
+% Next make the abstract
+\begin{abstract}
+
+Marek's disease (MD) in chickens is characterized by T cell
+lymphomas caused by the Marek¿s disease virus (MDV), an
+$\alpha$-herpesvirus. MD is a major economical problem for
+the poultry industry as it causes approximately \$2 billion
+in worldwide losses annually. Although vaccination has been
+effective at preventing tumor formation, it has not been
+able to prevent MDV infection or replication.  Consequently,
+more virulent field strains have emerged over the past
+decades following the introduction of new vaccines. Poor
+practices of vaccination and incomplete immunity have been
+speculated to play a role in driving the evolution of the
+virus with greater virulence. Therefore, it is critically
+important to develop more sustainable control measures to
+the disease in the long run.
+
+Development of genetically resistant chickens has been an
+alternative approach to control the virus and a number of studies
+have been conducted to identify specific genes that contribute to
+MD resistance. The major histocompatibility (MHC) locus has been
+found to be strongly associated with resistance or susceptibility
+to MD, and several alleles have been well characterized.  Non-MHC
+genes also play a major role in resistance to MD. Two inbred
+lines (line 6 and line 7) maintained at Avian and Oncology
+Laboratory share the same MHC allele (B\textsuperscript{2}), yet
+line 6 is resistant and line 7 is susceptible to MD,
+respectively.  These two lines have been used as a model to study
+non-MHC genes that contribute to resistance and susceptibility to
+the disease.
+
+To identify non-MHC genes contributing resistance to MD, a
+computational pipeline was developed to integrate gene models
+from Ensembl, {\em de novo} assembly, and reference-based
+assembly (Cufflinks) of sequencing reads to construct a more
+complete set of gene models that include more complete
+untranslated regions (UTRs) and isoforms predicted from RNA-Seq
+data. The results from expression analysis suggest that the
+immune response in line 7 is more active at the early stage of
+infection (4 days post-infection) compared to line 6.
+Differentially expressed genes are enriched in pathways involved
+in both the innate and the adaptive immune response in line 7,
+whereas, only genes involved in the innate immune response are
+significantly enriched in line 6. Due to the cell-associated
+nature of MDV and the current model of MDV infection, the virus
+is thought to transfer from B cells and antigen presenting cells
+(APCs) to activated T cells during the lytic infection.
+Therefore, repressed or delayed activation of the adaptive immune
+response in line 6 may be a key mechanism conferring MD
+resistance.
+
+Investigation of differential exon usage suggests that genes
+involved in the cytoskeleton pathway may play a role in
+repressing the activation of the adaptive immune response.
+For instance, the {\em ITGB2} gene encodes integrin $\beta$2, a component
+of several molecules including the lymphocyte
+function-associated antigen 1 (LFA-1). LFA-1 is exclusively
+expressed on the surface of leukocytes and plays an
+important role in cell-to-cell contact and antigen
+presentation.  It could be speculated that an alternative
+isoform of {\em ITGB2} affects a function of LFA-1 and prevents T
+cells from being activated by APCs or B cells resulting in
+the delayed activation of the adaptive immune response or
+the lower number of activated T cells, the target of MDV.
+
+The results from this study show that many genes not identified
+as differentially expressed at a gene level are differentially
+expressed at an isoform level; therefore, they will not be
+identified by gene expression analysis alone. Using the pipeline
+developed in this study, one can iteratively incorporate ENSEMBL
+models and RNA-seq data to construct better gene models that
+include genes and isoforms expressed in all samples and perform
+differential gene and isoform expression analysis to identify
+genes and isoforms that are responsible for resistance to MD.
+
+Although functions of most isoforms are not fully annotated,
+we have shown that methods, such as protein prediction and
+pathway analysis, can be used to predict the putative
+functions of the isoforms and their potential roles in MD
+resistance, which could open up a new direction for MD
+research. Moreover, prediction of causative {\em cis}-regulatory
+elements in those genes will lead to identification of
+precise genetic factors contributing to MD resistance.
+
+\end{abstract}
+
+% Force a newpage
+\clearpage
+% Make the copyright page. The Graduate School ridiculously prohibits you
+% from having a copyright page unless you pay ProQuest to register the copyright.
+% This should be illegal, but I didn't make up the rule.
+
+% \makecopyrightpage
+
+% If you have a dedication page, uncomment the next command to print the dedication page
+\makededicationpage
+%
+\clearpage
+% Your Acknowledgements are formatted like a chapter, but with no number
+\chapter*{Acknowledgements}
+\DoubleSpacing % Acknowledgements should be double spaced
+\input{ack}
+\clearpage
+% We need to turn single spacing back on for the contents/figures/tables lists
+\SingleSpacing
+\tableofcontents* % table of contents will not be listed in the TOC
+\clearpage
+\listoftables % comment this out if you have no tables
+\clearpage
+\listoffigures % comment this out if you have no figures
+%
+% If you have a list of abbreviations/symbols it would go here preceded by a \clearpage
+%
+\mainmatter
+%
+% The next line removes the dots in chapter headings in the TOC
+% May violate thesis office rules
+%\addtocontents{toc}{\protect\renewcommand{\protect\cftchapterdotsep} {\cftnodots}}
+
+\input{background}
+\input{chaptertwo}
+\input{chapterthree}
+\input{chapterfour}
+\input{conc}
+
+%
+% If you have pages that must appear in landscape mode, use the [lscape] option
+% and enclose the pages in a {landscape} environment.
+%\clearpage\pagestyle{lscape} % first clear the page and change the pagestyle
+%\begin{landscape}
+%
+% your landscape table(s) or figure(s) here
+%
+%\end{landscape}
+%\pagestyle{plain} % remember to change the pagestyle back to plain
+%
+%
+% If you have appendices, they would go here.  
+% Comment these lines out if you don't
+% If you have more than one appendix, uncomment the next line and comment out the \appendix line
+%
+%\appendices
+\appendix
+\input{gloss}
+%
+\backmatter
+% The next lines add the dots back into the References/Bibliography heading
+% of the TOC.  Only uncomment this if you need to put the dots back in having
+% removed them for Chapter headings.
+%
+%\addtocontents{toc}{%
+%   \protect\renewcommand{\protect\cftchapterdotsep} {\cftdotsep}}
+%
+\makebibliographycover % make the bibliography cover page
+% Bibliography can be single spaced
+%
+\SingleSpacing
+% Your bibliography command here (e.g. \bibliography{your-bib-file}) if using natbib
+\bibliographystyle{abbrv}
+\bibliography{dis}
+\end{document}
+
