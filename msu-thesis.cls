@@ -379,8 +379,8 @@ requirements\\for the degree of\\[\baselineskip]\@fieldofstudy~\msu@fieldseparat
 \let\orig@appendix\appendix
 \let\orig@appendices\appendices
 \let\orig@endappendices\endappendices
-\renewcommand*{\appendix}{\appendicesfalse\@makeappendixcover}
-% \renewcommand*{\appendix}{\appendicesfalse\@makeappendixcover\orig@appendix}
+% \renewcommand*{\appendix}{\appendicesfalse\@makeappendixcover}
+\renewcommand*{\appendix}{\appendicesfalse\@makeappendixcover\orig@appendix}
 \renewcommand*{\appendices}{\appendicestrue\@makeappendixcover\orig@appendix}
 \renewcommand*{\endappendices}{}
 
