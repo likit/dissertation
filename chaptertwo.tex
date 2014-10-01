@@ -197,9 +197,7 @@ Line 7 infected & 1611354 & 125640 & 296915 (18.4\%)& 9381 (7.5\%)\\
 \end{center}
 \caption{
     \textbf{Global and local assembly detect different isoforms with
-    the same k-mers.} For interpretation of the references to color
-in this and all other figures, the reader is referred to the
-electronic version of this dissertation.
+    the same k-mers.}
 }
 \label{img:global_vs_local}
 \end{figure}
@@ -649,11 +647,14 @@ Only a representative of each cluster is kept in gene models.
 \includegraphics[width=5in]{pipeline.pdf}
 \end{center}
 \caption{
-\textbf{Gene model construction pipeline.} Transcripts are obtained from two
-assembly methods -- global and local assembly.  Transcripts are aligned to the
-chicken genome by BLAT. Gimme then constructs gene models based on alignments
-of transcripts. Gene models from Cufflinks can also be
-incorporated to build the gene models.}
+\textbf{Gene model construction pipeline.}
+Transcripts are obtained from two assembly methods -- global and
+local assembly. Transcripts with low complexity are removed and
+poly(A) tails are trimmed by SeqClean. Transcripts are aligned to
+the chicken genome using BLAT and alignments are then used by
+Gimme to construct gene models. Gene models from Cufflinks and
+other sources can also be incorporated to build the gene models.
+}
 \label{pipeline}
 \end{figure}
 
@@ -674,22 +675,22 @@ $5'$ end of the transcripts and they are not the largest exons
 (Figure~\ref{algorithm}).  Transcripts were then grouped into the same gene if
 they have at least one intron or exon in common.  Then, a splice graph composed
 of exons is created and structures of isoforms are derived from traversing
-paths in the splice graph.  Gimme is open-source and available at
-\texttt{https://github.com/ged-lab/gimme}.
+paths in the splice graph.
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[width=7in]{algorithm.pdf}
 \end{center}
 \caption{
-\textbf{Intron and exon graphs.}
-Each intron connects to exons whose splice junctions match its
-boundary.  Some exons are excluded from the final gene model if
-they are at $3\prime$ or $5\prime$ end and smaller than other
-exons sharing the same intron (exon 1a,3a and 3b).  Introns
-sharing at least one exon are grouped together.  Then an exon
-graph is made using exons as nodes.  A transcript is derived from
-all unique exons in the graph.
+\textbf{Intron and exon graph.}
+Introns sharing at least one exon are grouped together, then an
+exon graph is constructed with exons from all introns as nodes.
+Exons are not included in the graph if they connect to only one
+intron and smaller than any other exons connecting to the same
+intron as they may be fragmented (exon 1a, 3a and 3b).  Edges of
+the exon graph (red arrows) are the introns.  A final
+gene/transcript model derived from the exon graph is shown at the
+bottom. 
 }
 \label{algorithm}
 \end{figure}
@@ -741,3 +742,8 @@ were aligned to the chicken genome using BLAT.
 The pipeline and scripts used in this study is hosted at
 
 \texttt{https://github.com/likit/gimme\_protocols}
+
+\noindent
+Gimme is open-source and available at
+
+\texttt{https://github.com/ged-lab/gimme}.
